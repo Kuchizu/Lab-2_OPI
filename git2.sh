@@ -36,12 +36,12 @@ git add .
 git commit -m "Revision 2 (r2)"
 git push -u origin master
 echo "- Коммит 2 (red)"
-unzip -o --allow-empty commits/commit3.zip -d src
+unzip -o commits/commit3.zip -d src
 git add .
 git commit --allow-empty -m "Revision 3 (r3)"
 git push -u origin master
 echo "- Коммит 3 (red)"
-unzip -o --allow-empty commits/commit4.zip -d src
+unzip -o commits/commit4.zip -d src
 git add .
 git commit --allow-empty -m "Revision 4 (r4)"
 git push -u origin master
@@ -95,10 +95,10 @@ git push -u origin branch2
 git checkout master
 unzip -o commits/commit11.zip -d src
 git add .
-git commit -m "Revision 11 (r11)"
+git commit --allow-empty -m "Revision 11 (r11)"
 unzip -o commits/commit12.zip -d src
 git add .
-git commit -m "Revision 12 (r12)"
+git commit --allow-empty -m "Revision 12 (r12)"
 git push -u origin master
 # }
 
@@ -112,7 +112,7 @@ git push -u origin branch2
 
 # Ревизия r14 (пользователь 1) {
 git checkout master
-git checkout --ours src/UyhygCx71w.e3l
+git checkout --ours "src/*"
 git merge branch2 -m "Merging two branches -> r14"
 git push -u origin master
 # }
